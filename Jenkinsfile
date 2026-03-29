@@ -20,4 +20,15 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo 'Cleaning up the workspace...'
+        }
+        success {
+            echo 'Build was successful! 🚀'
+        }
+        failure {
+            echo 'Build failed. Time to check the logs. 🛠️'
+        }
+    }
 }
